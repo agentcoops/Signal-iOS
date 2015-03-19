@@ -193,7 +193,6 @@ typedef enum : NSUInteger {
     _attachButton.imageEdgeInsets = UIEdgeInsetsMake(JSQ_IMAGE_INSET, JSQ_IMAGE_INSET, JSQ_IMAGE_INSET, JSQ_IMAGE_INSET);
     [_attachButton setImage:[UIImage imageNamed:@"btnAttachments--blue"] forState:UIControlStateNormal];
     
-    CGRect inputViewRect = self.inputToolbar.contentView.frame;
     CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
     _recordButton = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth - 42, (self.inputToolbar.contentView.frame.size.height/2) - (32/2), 32, 32)];
     _recordButton.imageEdgeInsets = UIEdgeInsetsMake(3, 3, 3, 3);
