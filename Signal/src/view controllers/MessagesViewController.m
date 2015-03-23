@@ -427,8 +427,12 @@ typedef enum : NSUInteger {
 -(void)initializeCollectionViewLayout
 {
     if (self.collectionView){
-        [self.collectionView.collectionViewLayout setMessageBubbleFont:[UIFont ows_regularFontWithSize:15.0f]];
-        
+        [self.collectionView.collectionViewLayout setMessageBubbleFont:[UIFont preferredFontForTextStyle: UIFontTextStyleBody]];
+
+        // The following two lines allow for you to control the line height/spacing for message bubbles.
+        [self.collectionView.collectionViewLayout setMessageBubbleLineHeightMultiple:3.0f maxLineHeight:60.0f minLineHeight:50.0f];
+        //[self.collectionView.collectionViewLayout setMessageBubbleLineSpacing:50.0f];
+                
         self.collectionView.showsVerticalScrollIndicator = NO;
         self.collectionView.showsHorizontalScrollIndicator = NO;
         
